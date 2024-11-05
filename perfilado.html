@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concierge</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<section class="WelPage">
+  <img src="img/mvshublogo.svg" alt="Logo mvshub" class="logmvshub">
+
+<div class="container perfilado">
+      <!-- Pregunta uno -->
+      <div class="row mb-5">
+        <div class="col-12 offset-md-2">
+          <p>¿Qué quieres ver hoy?</p>
+        </div>
+  
+        <div class="col-12 col-md-9 offset-md-2">
+          <div class="radio-with-Icon">
+            <p class="radioOption-Item">
+              <input type="radio" name="BannerTypesP1" id="BannerType1" value="image">
+              <label for="BannerType1">
+                Series
+                <img src="img/perfilado_icons/series_icon.svg" alt="Series Icon">
+              </label>
+              
+            </p>
+  
+  
+            <p class="radioOption-Item">
+              <input type="radio" name="BannerTypesP1" id="BannerType2" value="video">
+              <label for="BannerType2">
+                Películas
+                <img src="img/perfilado_icons/film_icon.svg" alt="Films">
+              </label>
+            
+            </p>
+  
+            <p class="radioOption-Item">
+              <input type="radio" name="BannerTypesP1" id="BannerType3" value="text">
+              <label for="BannerType3">
+                Ambas
+                <img src="img/perfilado_icons/any_content_icon.svg" alt="Any content">
+              </label>
+            
+            </p>
+         
+          </div>
+        </div> 
+       </div>
+
+       <!-- Pregunta dos -->
+       <div class="row mb-5">
+        <div class="col-12 offset-md-2">
+          <p>¿Qué tipo de historia buscas?</p>
+          <select id="storyTypeSelector">
+            <option value="">Selecciona una opción</option>
+            <option value="drama">Drama</option>
+            <option value="comedia">Comedia</option>
+            <option value="accion">Acción</option>
+            <option value="romance">Romance</option>
+            <option value="suspenso">Suspenso</option>
+            <option value="cienceficcion">Ciencia ficción</option>
+            <option value="animation">Animación</option>
+            <option value="terror">Terror</option>
+            <option value="fantasy">Fantasía</option>
+            <option value="crime">Crimen</option>
+           
+          </select>
+        </div>
+      
+        <!-- Div oculto inicialmente -->
+        <div class="generos col-12 col-md-9 offset-md-2 content d-none">
+          <ul><input type="text" spellcheck="false"></ul>
+      
+          <!-- Contenedores de opciones, inicialmente ocultos -->
+          <div id="drama" class="options-container story-options" style="display: none;">
+            <div class="options">
+              <span class="option-tag">Historias llenas de emociones</span>
+              <span class="option-tag">Vidas que te conmoverán</span>
+            </div>
+          </div>
+      
+          <div id="comedia" class="options-container story-options" style="display: none;">
+            <div class="options">
+              <span class="option-tag">Risas garantizadas</span>
+              <span class="option-tag">Humor para todos los gustos</span>
+              <span class="option-tag">Desconéctate y diviértete</span>
+            </div>
+          </div>
+      
+          <div id="accion" class="options-container story-options" style="display: none;">
+            <div class="options">
+              <span class="option-tag">Adrenalina al máximo</span>
+              <span class="option-tag">Héroes y villanos en acción</span>
+              <span class="option-tag">Aventuras al máximo</span>
+            </div>
+          </div>
+
+          <div id="romance" class="options-container story-options" style="display: none;">
+            <div class="options">
+              <span class="option-tag">Historias de amor que te harán suspirar</span>
+              <span class="option-tag">Encuentra tu pareja ideal en la pantalla</span>
+              <span class="option-tag">Suspira de amor</span>
+            </div>
+          </div>
+
+          <div id="suspenso" class="options-container story-options" style="display: none;">
+            <div class="options">
+              <span class="option-tag">Giros inesperados que te sorprenderán</span>
+              <span class="option-tag">Desentraña misterios</span>
+            </div>
+          </div>
+
+          <div id="cienceficcion" class="options-container story-options" style="display: none;">
+            <div class="options">
+              <span class="option-tag">Viaja a otros mundos</span>
+              <span class="option-tag">Descubre el futuro</span>
+              <span class="option-tag">Aventuras fuera de este mundo</span>
+            </div>
+          </div>
+
+          <div id="animation" class="options-container story-options" style="display: none;">
+            <div class="options">
+              <span class="option-tag">Fantasía y diversión: una buena animación</span>
+              <span class="option-tag">Historias mágicas y personajes entrañables</span>
+              <span class="option-tag">Una buena animación</span>
+            </div>
+          </div>
+
+          <div id="terror" class="options-container story-options" style="display: none;">
+            <div class="options">
+              <span class="option-tag">Vive experiencias escalofriantes</span>
+              <span class="option-tag">Enfréntate a tus miedos</span>
+              <span class="option-tag">Historias para asustarte</span>
+              <span class="option-tag">Asústame panteón</span>
+            </div>
+          </div>
+
+          <div id="fantasy" class="options-container story-options" style="display: none;">
+            <div class="options">
+              <span class="option-tag">Mundos mágicos y criaturas míticas</span>
+              <span class="option-tag">Aventuras épicas y hechizos poderosos</span>
+              <span class="option-tag">Magia, dragones y más</span>
+            </div>
+          </div>
+
+          <div id="crime" class="options-container story-options" style="display: none;">
+            <div class="options">
+              <span class="option-tag">Resuelve misterios y crímenes</span>
+              <span class="option-tag">Detectives y asesinos en acción</span>
+              <span class="option-tag">Intriga y crimen garantizados</span>
+              <span class="option-tag">Tú eres el detective</span>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+       <!-- Pregunta tres -->
+       <div class="row mb-5">
+        <div class="col-12 offset-md-2">
+          <p>¿De cuánto tiempo dispones?</p>
+        </div>
+  
+        <div class="col-12 col-md-9 offset-md-2">
+          <div class="radio-with-Icon">
+            <p class="radioOption-Item">
+              <input type="radio" name="BannerTypes3P" id="BannerType3a" value="image">
+              <label for="BannerType3a">
+                Menos de 30 minutos 
+                <img src="img/perfilado_icons/30min.svg" alt="Fast">
+              </label>
+              
+            </p>
+  
+  
+            <p class="radioOption-Item">
+              <input type="radio" name="BannerTypes3P" id="BannerType3b" value="video">
+              <label for="BannerType3b">
+                30 minutos a 1 hora
+                <img src="img/perfilado_icons/time1hr.svg" alt="Una hora">
+              </label>
+            
+            </p>
+  
+            <p class="radioOption-Item">
+              <input type="radio" name="BannerTypes3P" id="BannerType3c" value="text">
+              <label for="BannerType3c">
+                1 a 2 horas
+                <img src="img/perfilado_icons/1-2hrs.svg" alt="Una o dos horas">
+              </label>
+            
+            </p>
+            <p class="radioOption-Item">
+              <input type="radio" name="BannerTypes3P" id="BannerType3d" value="audio">
+              <label for="BannerType3d">
+                Maratonear
+                <img src="img/perfilado_icons/maratonear.svg" alt="Maratonerar">
+              </label>
+            
+            </p>
+       
+          </div>
+        </div> 
+       </div>
+
+       <!-- Pregunta cuatro -->
+       <div class="row mb-5">
+        <div class="col-12 offset-md-2">
+          <p>¿Qué tan reciente prefieres que sea?</p>
+        </div>
+  
+        <div class="col-12 col-md-9 offset-md-2">
+          <div class="radio-with-Icon">
+              
+            <p class="radioOption-Item">
+              <input type="radio" name="BannerTypes4P" id="BannerType4c" value="text">
+              <label for="BannerType4c">
+                Estrenos
+                <img src="img//perfilado_icons/estrenos_icon.svg" alt="Estrenos">
+              </label>
+            
+            </p>
+            <p class="radioOption-Item">
+              <input type="radio" name="BannerTypes4P" id="BannerType4b" value="image">
+              <label for="BannerType4b">
+                2000´s
+                <img src="img/perfilado_icons/2000_icon.svg" alt="2000´s">
+              </label>
+              
+            </p>
+            <p class="radioOption-Item">
+              <input type="radio" name="BannerTypes4P" id="BannerType4a" value="image">
+              <label for="BannerType4a">
+                Clásicos
+                <img src="img/perfilado_icons/clasisic_icon.svg" alt="Clasicos">
+              </label>
+            </p>
+  
+        
+
+            <p class="radioOption-Item">
+              <input type="radio" name="BannerTypes4P" id="BannerType4d" value="audio">
+              <label for="BannerType4d">
+                Cualquier época
+                <img src="img/perfilado_icons/any_date.svg" alt="Any Date">
+              </label>
+            </p>
+          </div>
+        </div> 
+       </div>
+       
+
+          <!-- Pregunta cuatro -->
+          <div class="row mb-5">
+            <div class="col-12 offset-md-2">
+              <p>¿Con quién lo verás?</p>
+            </div>
+      
+            <div class="col-12 col-md-9 offset-md-2">
+              <div class="radio-with-Icon">
+                  
+                <p class="radioOption-Item">
+                  <input type="radio" name="BannerTypes5P" id="BannerType5d" value="audio">
+                  <label for="BannerType5d">
+                  Solo
+                    <img src="img/perfilado_icons/any_date.svg" alt="Any Date">
+                  </label>
+                </p>
+
+                <p class="radioOption-Item">
+                  <input type="radio" name="BannerTypes5P" id="BannerType5c" value="text">
+                  <label for="BannerType5c">
+                   En pareja
+                    <img src="img//perfilado_icons/estrenos_icon.svg" alt="Estrenos">
+                  </label>
+                
+                </p>
+                <p class="radioOption-Item">
+                  <input type="radio" name="BannerTypes5P" id="BannerType5b" value="image">
+                  <label for="BannerType5b">
+                    En Familia
+                    <img src="img/perfilado_icons/2000_icon.svg" alt="2000´s">
+                  </label>
+                  
+                </p>
+                <p class="radioOption-Item">
+                  <input type="radio" name="BannerTypes5P" id="BannerType5a" value="image">
+                  <label for="BannerType5a">
+                    Con amigos
+                    <img src="img/perfilado_icons/clasisic_icon.svg" alt="Clasicos">
+                  </label>
+                </p>
+      
+            
+    
+              </div>
+            </div> 
+           </div>  
+</div>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <a class="btn btn-primary" href="califica.html" role="button">CONTINUAR</a>
+    </div>
+  </div>
+</div> 
+
+</section>
+
+
+<footer class="d-block d-md-none footer fixed-bottom">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col icoConcierge">
+        <img src="img/menu/aiconcierge.svg" alt="Concierge" > 
+      
+       <p>Concierge</p>
+      </div>
+      <div class="col icoDescubre ">
+        <img src="img/menu/aisearch.svg" alt="Descubre" >
+       <p>Descubre</p>
+      </div>
+      <div class="col icoPerfilado menuIconActived">
+        <img src="img/menu/aiperfilado.svg" alt="Perfilado" >
+       <p>Perfilado</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script> <!-- Importamos la librería de GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+
+
+
+
+
+</body>
+</html>

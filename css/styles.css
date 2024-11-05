@@ -1,0 +1,927 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    background-color: black;
+}
+
+  #conciergeText {
+        font-size: 2rem;
+        opacity: 0; /* Iniciar con opacidad 0 */
+        transform: translateY(10px); /* Iniciar un poco más abajo */
+    }
+
+
+
+ .conciergeText .califica{
+        font-size: 2rem;
+        opacity: 0; /* Iniciar con opacidad 0 */
+        transform: translateY(10px); /* Iniciar un poco más abajo */
+        text-align: left;
+    }
+
+.WelPage{
+    margin-top: 3%;
+    height: 100%;
+    margin-bottom: 5%;
+   
+}
+
+
+/* Logo mvshub */
+
+.logmvshub{
+   min-width: 300px;
+   display: block;
+   margin: 0 auto;
+   margin-bottom: 5%;
+}
+
+
+.logmvshubCalf{
+  min-width: 300px;
+  display: block;
+  margin: 0 auto;
+ margin-top: 1%;
+ margin-bottom: 1%;
+}
+
+
+.LogConcierge{
+    margin: 0 auto;
+    margin: 0px;
+}
+
+.LogConcierge svg{
+    width: 100%;
+    height: 12.2rem;
+    padding-top: 4%;
+}
+
+
+.perfilado{
+    margin-top: 5%;
+}
+
+.perfilado .LogConcierge img{
+    width: 50px;
+    float: right;
+    margin: 0px;
+    
+}
+
+.perfilado p{
+    color: #FFF;
+    text-align: left;
+    font-size: 1.6rem;
+    font-weight: 200;
+    padding: 1% 0;
+  
+
+}
+
+.LogConcierge {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1.5s ease-out forwards; /* Ejecuta la animación al cargar */
+}
+
+/* Definir la animación */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Mueve hacia arriba */
+    }
+}
+
+
+
+.conciergeText{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    color: #FFF;
+    font-size: 2.2rem;
+}
+
+
+
+.conciergeWelc{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    color: #FFF;
+    font-size: 2.0rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1.5s ease-out forwards; /* Ejecuta la animación al cargar */
+    margin-top: 10px;
+}
+
+
+/* Estilos de botones */
+
+.btn-primary{
+    background-color: #313131;
+    border: 1px solid #46474A;
+    padding: 1% 5%;
+}
+
+.btn-primary:hover{
+    background-color: #F57B0F;
+    border: 1px solid #fff;
+    padding: 1% 5%;
+}
+
+.btn-primary:active{
+    background-color: #F57B0F;
+    border: 1px solid #fff;
+    padding: 1% 5%;
+}
+
+/* Estilos del menu */
+
+
+
+.icoConcierge, .icoDescubre, .icoPerfilado{
+    background-color: #313131;
+    color: #FFF;
+    padding: 1%;
+}
+
+.icoConcierge:hover,.icoDescubre:hover, .icoPerfilado:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.icoConcierge a:hover,.icoDescubre a:hover, .icoPerfilado a:hover{
+  color: #000000;
+}
+
+
+.icoConcierge img, .icoDescubre img, .icoPerfilado img{
+    width: 30px;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+
+.icoConcierge p, .icoDescubre p, .icoPerfilado p{
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    margin-bottom: 0px;
+}
+
+
+.icoConcierge a, .icoDescubre a, .icoPerfilado a{
+ text-decoration: none;
+ color: #fff;
+}
+
+
+
+.menuIconActived {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+.menuIconActived {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.menuIconActived a {
+ color: #000;
+}
+
+
+/* Estilo del footer */
+
+.footer {
+    background-color: #313131;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+  }
+  
+ 
+
+
+
+/* Estilos para las preguntas */
+.radio-with-Icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+  
+  .radioOption-Item {
+    display: flex;
+    align-items: left;
+    width: 33%;
+    height: 80px;
+    margin: 10px;
+    border: none;
+  }
+  
+  
+  .radioOption-Item label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: left;
+    width: 100%;
+  }
+
+
+
+  .radioOption-Item {
+    border-radius: 10px;
+    border: 2px solid #46474A;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: left;
+   
+  }
+  .radioOption-Item img {
+    margin-right: 10px;
+    width: 40px;
+   }
+
+
+   .radioOption-Item input[type="radio"] {
+    display: none;
+  }
+
+  .radioOption-Item:hover {
+    background-color: #313131;
+    color: #ffffff;
+
+   
+  }
+
+.radioOption-Item input[type="radio"]:checked + label {
+    background-color: #F67D0F;
+    color: #ffffff;
+    border-radius:  6px;
+    border: 0.1rem solid #fff;
+    
+  }
+  
+  .perfilado p {
+    padding: 0;
+}
+
+
+
+  .perfilado input[type="radio"]:checked + .radioOption-Item {
+    padding: 0px;
+  }
+
+
+  /* Seccion Califica */
+.califica h2{
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #fff;
+}
+
+
+.califica p{
+    font-size: 1.0rem;
+    font-weight: 100;
+    color: #fff;
+}
+
+/* Estilos texto calificacion */
+
+.titleCalf{
+  text-align: center;
+  color: #fff;
+}
+.titleCalf h2{
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+.titleCalf p{
+  font-weight: 100;
+  font-size: 1.3rem;
+}
+
+
+
+/* Aquí el ajuste */
+
+/* Estilos texto calificacion */
+.titleCalf {
+  text-align: center;
+  color: #fff;
+}
+
+.titleCalf h2 {
+  font-weight: 100;
+  font-size: 1.8rem;
+}
+
+.titleCalf p {
+  font-weight: 100;
+  font-size: 1.3rem;
+}
+
+/* Swap Card | Tinder */
+
+
+/* Estilos texto calificacion */
+
+.titleCalf{
+  text-align: center;
+  color: #fff;
+}
+.titleCalf h2{
+  font-weight: 100;
+  font-size: 1.8rem;
+}
+.titleCalf p{
+  font-weight: 100;
+  font-size: 1.3rem;
+}
+
+/* Swap Card | Tinder */
+
+.tinder {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+  
+.loaded.tinder {
+  opacity: 1;
+}
+
+.tinder--status {
+  position: absolute;
+  top: 30%;
+  margin-top: -30px;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+
+.tinder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85vh; /* Altura de la pantalla completa */
+}
+
+
+
+.tinder--status {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-content: center;
+ 
+}
+
+
+
+/* Test */
+
+
+
+
+.moving.tinder--card {
+  transition: none;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+
+.tinder--card img {
+  max-width: 100%;
+  pointer-events: none;
+}
+
+
+
+
+.tinder--buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* Ajusta según el ancho que prefieras */
+  margin: 0 auto;
+  height: 100px;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+
+}
+
+.tinder--buttons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px; /* Tamaño del botón */
+  height: 70px; /* Tamaño del botón */
+}
+
+.tinder--buttons a img {
+  width: 100%; /* Ajusta la imagen al tamaño del enlace */
+  height: auto;
+}
+
+
+.tinder--cards {
+  flex-grow: 1;
+  padding-top: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+
+/* Estilo de la tarjeta */
+.tinder--card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  max-width: 320px;
+  background: #313131;
+  border-radius: 8px;
+  overflow: hidden;
+  position: absolute;
+  padding: 0px;
+  box-sizing: border-box;
+  margin: 10px auto;
+
+ will-change: transform;
+  transition: all 0.3s ease-in-out;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+
+
+}
+
+/* Imagen de la tarjeta */
+.tinder--card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0px 0px;
+}
+
+
+
+.tinder--status img {
+  font-size: 100px;
+  opacity: 0;
+  transform: scale(0.3);
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  width: 100px;
+margin: 0 auto;
+ 
+}
+
+.tinder_nope .dislike-icon {
+  opacity: 0.7;
+  transform: scale(1);
+}
+
+.tinder_love  .like-icon {
+  opacity: 0.7;
+  transform: scale(1);
+}
+
+
+
+
+/* Termina ajuste */
+
+/* Contenedor de texto con scroll */
+.text-content {
+  max-height: 250px; /* Altura máxima del contenedor de texto */
+  overflow-y: auto; /* Habilita el scroll vertical */
+  width: 100%;
+  padding: 2%;
+  box-sizing: border-box;
+  background-color: #000000;
+
+}
+
+
+
+
+/* Estilos Ficha */
+
+.text-content h3 {
+  margin-top: 5px;
+  font-size: 1.8rem;
+  padding: 0 16px;
+  pointer-events: none;
+  color: #ffffff;
+  font-weight: 200;
+  text-align: left;
+}
+
+
+.text-content ul{
+  list-style: none;
+  padding-left: 10px;
+  text-align: left;
+
+}
+
+.text-content ul li{
+  display: inline-block;
+}
+
+.tinder--card p {
+  margin-top: 0;
+  padding-left: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: left;
+
+}
+
+.labelsRecom{
+  background-color: #46474A;
+  font-size: 0.9rem;
+  font-weight: 300;
+
+}
+
+
+/* Ajustes resultados */
+
+.poster-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.poster-img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Preguntas */
+
+.content ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 12px 0;
+  border-radius: 5px;
+  border: 2px solid #4b4b4b;
+
+}
+
+
+.content ul input {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+
+.options-container {
+  overflow-x: scroll;
+  white-space: nowrap;
+  display: flex;
+  cursor: grab;
+}
+
+
+.option-tag {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #313131;
+    border-radius: 5px;
+    border: 1px solid #46474A;
+    color: #fff;
+    border-radius: 25px;
+    padding: 0.5rem 1.3rem;
+}
+
+.option-tag:hover {
+  background-color: #F57B0F;  
+}
+
+
+.option-tag.selected {
+  background-color: #FF9800; 
+}
+
+
+
+
+
+::selection {
+  color: #fff;
+  background: #353842;
+}
+.wrapper {
+  width: 496px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px 25px 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
+}
+.wrapper :where(.title, li, li i, .details) {
+  display: flex;
+  align-items: center;
+}
+.title img {
+  max-width: 21px;
+}
+.title h2 {
+  font-size: 21px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+.wrapper .content {
+  margin: 10px 0;
+}
+.content p {
+  font-size: 15px;
+}
+.content ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 7px;
+  margin: 12px 0;
+  border-radius: 5px;
+  border: 1px solid #a6a6a6;
+}
+.content ul li {
+  color: #333;
+  margin: 4px 3px;
+  list-style: none;
+  border-radius: 5px;
+  background: #f2f2f2;
+  padding: 5px 8px 5px 10px;
+  border: 1px solid #e3e1e1;
+}
+.content ul li i {
+  height: 20px;
+  width: 20px;
+  color: #808080;
+  margin-left: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #dfdfdf;
+  justify-content: center;
+}
+.content ul input {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.wrapper .details {
+  justify-content: space-between;
+}
+
+
+
+/* Estilos select */
+
+select#storyTypeSelector {
+  width: 320px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 200;
+  text-align: left;
+  border-radius: 10px;
+  border: 2px solid #46474A;
+  background-color: #000;
+  color: #fff;
+  height: 65px;
+  outline: none;
+  appearance: none; 
+  background-image: url('/img/perfilado_icons/arrow-select.svg');
+  background-repeat: no-repeat; 
+  background-position: right 20px center; /* Posiciona la flecha a la derecha */
+  background-size: 20px 35px; /* Tamaño de la flecha */
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width:480px) and (min-width:320px) { 
+	
+    .logmvshub{
+        min-width: 190px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 5%;
+     }
+     
+
+     .Claf{
+      font-size: 1.8rem!important;
+     }
+
+.conciergeText{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    color: #FFF;
+    font-size: 1.5rem;
+}
+
+
+
+.conciergeWelc{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    color: #FFF;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1.5s ease-out forwards; /* Ejecuta la animación al cargar */
+    margin-top: 10px;
+    line-height: 30px;
+}
+
+
+
+
+.btn-footer {
+    font-size: 20px; 
+  }
+
+.btn-primary{
+    padding: 6% 5%;
+}
+
+.btn-primary:hover{   
+    padding: 6% 5%;
+}
+
+.btn-primary:active{
+    padding: 6% 5%;
+}
+
+
+.radioOption-Item {
+    width: 100%;
+  }
+  
+
+
+  .perfilado .LogConcierge img {
+    float:none;
+}
+
+.radioOption-Item label {
+
+    font-size: 1.3rem;
+  }
+
+
+.titleCalf{
+  margin-top: 5%;
+}
+
+
+.titleCalf h2{
+  font-weight: 300;
+  font-size: 1.55rem;
+}
+
+.tinder {
+  height: 115vh; /* Altura de la pantalla completa */
+}
+
+
+.WelPage{
+  margin-top: 3%;
+  height: 100%;
+  margin-bottom: 40%;
+
+}
+
+.perfilado p {
+  color: #FFF;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 200;
+  padding: 1% 0;
+}
+
+
+
+.tinder--buttons {
+  max-width: 230px; /* Ajusta según el ancho que prefieras */
+  height: 100px;
+}
+
+select#storyTypeSelector {
+  width: 100%;
+  font-size: 22px;
+}
+
+
+}
+
+@media only screen and (max-width:1280px) and (min-width:768px) { 
+	
+
+.conciergeText{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    color: #FFF;
+    font-size: 1.5rem;
+}
+
+
+
+.conciergeWelc{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    color: #FFF;
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1.5s ease-out forwards; /* Ejecuta la animación al cargar */
+    margin-top: 10px;
+    padding: 0 20%;
+}
+.WelPage{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.btn-primary{
+    padding:  2% 10%;
+}
+
+.btn-primary:hover{   
+    padding:  2% 10%;
+}
+
+.btn-primary:active{
+    padding:  2% 10%;
+}
+
+.tinder {
+  height: 80vh; /* Altura de la pantalla completa */
+}
+
+.tinder--buttons {
+  max-width: 230px; /* Ajusta según el ancho que prefieras */
+  height: 100px;
+}
+
+}
