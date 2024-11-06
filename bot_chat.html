@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+    /* Reseteo de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.chat-box {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.message.bot {
+  background-color: #f1f0f0;
+  color: #333;
+  align-self: flex-start;
+}
+
+.message.user {
+  background-color: #313131;
+  color: white;
+  align-self: flex-end;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.input-container {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  background-color: #F67D0F;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #F67D0F;
+}
+
+.chat-header{
+  background-color:#000;
+  padding-bottom: 5%;
+}
+
+.chat-header h2{
+  color: #fff;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.8rem;
+}
+
+.chat-header p{
+  color: #fff;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 1.0rem;
+  padding: 0 15%;
+}
+
+
+  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concierge</title>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <center>
+        <img src="img/perfilado_icons/avatar_icon.svg" alt="Perfil" class="header-avatar">
+      </center>
+      <h2>¡Bienvenido!</h2>
+      <p>Encuentra tu próxima serie o película favorita sin esfuerzo</p>
+    </div>
+    <div class="chat-box" id="chatBox">
+      <!-- Mensajes de chat se agregarán aquí -->
+      <div class="message bot">
+        <img src="img/perfilado_icons/avatar_icon.svg" alt="Bot" class="avatar">
+        <p>¡Hola, soy tu asistente personal de series y películas! Déjame conocerte más para sugerirte el contenido más adecuado para ti, solo necesitas contestar unas sencillas preguntas. Comencemos:</p>
+        
+      </div>
+      <div class="message bot">
+        <p>
+          <span><b>¿Qué quieres ver hoy?</b></span><br><br>
+          <span>Escribe una de las siguientes opciones:</span><br>
+           <span>Series</span> <br>
+           <span>Películas</span> <br>
+           <span>Ambas (No tengo preferencia)</span>     
+        </p>
+        
+        
+      </div>
+    </div>
+    <div class="input-container">
+      <input type="text" id="messageInput" placeholder="Escribe un mensaje...">
+      <button id="sendButton">Enviar</button>
+    </div>
+  </div>
+  <script>
+    // Selecciona elementos de la interfaz
+const chatBox = document.getElementById('chatBox');
+const messageInput = document.getElementById('messageInput');
+const sendButton = document.getElementById('sendButton');
+
+// Función para agregar mensaje al chat con imagen de avatar
+function addMessage(text, sender) {
+  const message = document.createElement('div');
+  message.classList.add('message', sender);
+
+  // Crea la imagen de avatar
+  const avatar = document.createElement('img');
+  avatar.classList.add('avatar');
+  avatar.src = sender === 'bot' ? 'img/perfilado_icons/avatar_icon.svg' : 'img/perfilado_icons/tu_icon.svg';
+  avatar.alt = sender === 'bot' ? 'Bot' : 'Usuario';
+
+  // Crea el texto del mensaje
+  const messageText = document.createElement('p');
+  messageText.textContent = text;
+
+  // Agrega el avatar y el texto al mensaje
+  message.appendChild(avatar);
+  message.appendChild(messageText);
+  chatBox.appendChild(message);
+
+  chatBox.scrollTop = chatBox.scrollHeight; // Desplaza el chat hacia abajo
+}
+
+// Simulación de respuesta del bot
+function botReply(userMessage) {
+  setTimeout(() => {
+    addMessage(`Concierge: ${userMessage}`, 'bot');
+  }, 1000); // Simula un pequeño retraso
+}
+
+// Enviar mensaje al presionar el botón
+sendButton.addEventListener('click', () => {
+  const userMessage = messageInput.value.trim();
+  if (userMessage) {
+    addMessage(userMessage, 'user');
+    botReply(userMessage); // Respuesta automática del bot
+    messageInput.value = ''; // Limpia el input después de enviar
+  }
+});
+
+// Permitir enviar mensaje con la tecla Enter
+messageInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    sendButton.click();
+  }
+});
+
+  </script>
+</body>
+</html>
