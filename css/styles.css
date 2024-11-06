@@ -839,7 +839,7 @@ select#storyTypeSelector {
 
 .titleCalf h2{
   font-weight: 300;
-  font-size: 1.55rem;
+  font-size: 1.4rem;
 }
 
 .tinder {
@@ -865,8 +865,10 @@ select#storyTypeSelector {
 
 
 .tinder--buttons {
-  max-width: 230px; /* Ajusta según el ancho que prefieras */
+  max-width: 320px; /* Ajusta según el ancho que prefieras */
   height: 100px;
+  position: absolute;
+  top: 200px;
 }
 
 select#storyTypeSelector {
