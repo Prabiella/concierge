@@ -620,11 +620,15 @@ margin: 0 auto;
 
 .options-container {
   overflow-x: scroll;
+  scrollbar-width: none;
   white-space: nowrap;
   display: flex;
   cursor: grab;
 }
 
+.options-container::-webkit-scrollbar {
+  display: none; 
+}
 
 .option-tag {
     display: inline-block;
