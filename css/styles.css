@@ -866,6 +866,7 @@ select#storyTypeSelector {
 select#storyTypeSelector {
   width: 100%;
   font-size: 22px;
+  height: 75px;
 }
 
 
