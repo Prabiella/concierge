@@ -457,7 +457,7 @@ body{
 
 .tinder--cards {
   flex-grow: 1;
-  padding-top: 40px;
+  padding-top: 80px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -843,7 +843,7 @@ select#storyTypeSelector {
 }
 
 .tinder {
-  height: 95vh; /* Altura de la pantalla completa */
+  height: 85vh; /* Altura de la pantalla completa */
 }
 
 
@@ -890,7 +890,25 @@ select#storyTypeSelector {
 }
 
 
+.tinder--card {
+  max-width: 280px;
+}
 
+
+.titleCalf p{
+  font-weight: 100;
+  font-size: 1.0rem;
+}
+
+
+.text-content h3 {
+  font-size: 1.2rem;
+}
+
+.tinder--card p {
+  font-size: 0.9rem;
+
+}
 
 }
 
