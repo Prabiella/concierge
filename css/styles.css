@@ -145,18 +145,18 @@ body{
 
 
 .icoConcierge, .icoDescubre, .icoPerfilado{
-    background-color: #313131;
-    color: #FFF;
+    background-color: #ffffff;
+    color: #313131;
     padding: 1%;
 }
 
 .icoConcierge:hover,.icoDescubre:hover, .icoPerfilado:hover{
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #313131;
+    color: #fff;
 }
 
 .icoConcierge a:hover,.icoDescubre a:hover, .icoPerfilado a:hover{
-  color: #000000;
+  color: #fff;
 }
 
 
@@ -169,14 +169,15 @@ body{
 .icoConcierge p, .icoDescubre p, .icoPerfilado p{
     font-size: 1.2rem;
     font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    margin-bottom: 0px;
+    font-weight: 400;
+   margin-top: 5%;
+    
 }
 
 
 .icoConcierge a, .icoDescubre a, .icoPerfilado a{
  text-decoration: none;
- color: #fff;
+ color: #313131;
 }
 
 
@@ -582,6 +583,16 @@ margin: 0 auto;
 
 /* Ajustes resultados */
 
+
+
+
+/* Contenedor del póster */
+.poster-container {
+  position: relative;
+  overflow: hidden; /* Para asegurar que el hover se ajusta a los bordes */
+}
+
+/* Imagen del póster */
 .poster-img {
   width: 100%;
   height: auto;
@@ -589,8 +600,28 @@ margin: 0 auto;
   transition: transform 0.2s;
 }
 
-.poster-img:hover {
+/* Efecto de zoom en el póster */
+.poster-container:hover .poster-img {
   transform: scale(1.05);
+
+}
+
+/* Imagen del icono "play", oculta por defecto */
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;  /* Ajusta el tamaño del icono */
+  height: 100%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 0.2s;
+  pointer-events: none; /* Evita que interfiera con el hover */
+}
+
+/* Muestra el icono de "play" al hacer hover en el contenedor */
+.poster-container:hover .play-icon {
+  opacity: 1;
 }
 
 
