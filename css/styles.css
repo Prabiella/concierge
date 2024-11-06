@@ -635,7 +635,7 @@ margin: 0 auto;
     margin-right: 10px;
     cursor: pointer;
     padding: 5px 10px;
-    background-color: #313131;
+    background-color: #000000;
     border-radius: 5px;
     border: 1px solid #46474A;
     color: #fff;
@@ -751,7 +751,9 @@ select#storyTypeSelector {
 
 
 
-
+.mainquestion{
+  border: 1px solid #333;
+}
 
 
 
@@ -871,6 +873,11 @@ select#storyTypeSelector {
   width: 100%;
   font-size: 22px;
   height: 75px;
+}
+
+.mainquestion{
+  background-color:#323232;
+  border: 1px solid #333;
 }
 
 
