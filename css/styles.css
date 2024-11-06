@@ -738,7 +738,7 @@ select#storyTypeSelector {
   height: 65px;
   outline: none;
   appearance: none; 
-  background-image: url('/img/perfilado_icons/arrow-select.png');
+  background-image: url('../img/perfilado_icons/arrow-select.png');
   background-repeat: no-repeat; 
   background-position: right 20px center; 
   background-size: 30px 20px;
