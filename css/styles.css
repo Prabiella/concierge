@@ -881,6 +881,17 @@ select#storyTypeSelector {
 }
 
 
+.generos p {
+  color: #FFF;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 200;
+  padding: 1% 0;
+}
+
+
+
+
 }
 
 @media only screen and (max-width:1280px) and (min-width:768px) { 
